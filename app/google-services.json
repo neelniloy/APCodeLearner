@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "309613875587",
+    "project_id": "codelearner-4ee04",
+    "storage_bucket": "codelearner-4ee04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309613875587:android:3017b8461d3d771ddde6b6",
+        "android_client_info": {
+          "package_name": "com.prattasha.apcodelearner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309613875587-oh33pfp90dhc9iq6h2v8poeai8l0hag2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdW7YftgFpFIUFTjILVB3edkKv20bm7hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309613875587-oh33pfp90dhc9iq6h2v8poeai8l0hag2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309613875587:android:f0e63f2f30f5d72bdde6b6",
+        "android_client_info": {
+          "package_name": "com.projitize.apcodelearner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309613875587-oh33pfp90dhc9iq6h2v8poeai8l0hag2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdW7YftgFpFIUFTjILVB3edkKv20bm7hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309613875587-oh33pfp90dhc9iq6h2v8poeai8l0hag2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

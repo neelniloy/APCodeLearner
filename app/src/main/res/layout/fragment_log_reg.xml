@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LogRegFragment">
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/scan_routine"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/scan_icon"/>
+
+            <TextView
+                android:id="@+id/import_routine"
+                android:layout_marginStart="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple"
+                android:text="Import Routine"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="35dp"
+            android:id="@+id/intro_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_marginStart="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#555" />
+
+            <TextView
+                android:layout_marginStart="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scheduler!"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/purple" />
+
+
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sing_in"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign in"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#474747" />
+
+                <TextView
+                    android:id="@+id/sign_up"
+                    android:layout_marginStart="35dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign up"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#474747" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_below="@+id/intro_layout"
+            android:layout_marginTop="15dp"
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true" />
+
+    </RelativeLayout>
+</layout>
