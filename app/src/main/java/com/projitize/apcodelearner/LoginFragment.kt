@@ -3,7 +3,6 @@ package com.braineer.scheduler
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -17,7 +16,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import com.braineer.scheduler.viewmodels.LoginViewModel
+import com.projitize.apcodelearner.viewmodels.LoginViewModel
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -100,7 +99,7 @@ class LoginFragment : Fragment() {
                 progressDialog.show()
 
                 val progressbar = progressDialog!!.findViewById(android.R.id.progress) as ProgressBar
-                progressbar.indeterminateDrawable.setColorFilter(Color.parseColor("#953FFF"), android.graphics.PorterDuff.Mode.SRC_IN)
+                progressbar.indeterminateDrawable.setColorFilter(Color.parseColor("#F75022"), android.graphics.PorterDuff.Mode.SRC_IN)
 
 
                 loginViewModel.loginUser(email, password) {

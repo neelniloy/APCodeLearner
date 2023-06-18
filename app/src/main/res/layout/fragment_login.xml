@@ -13,7 +13,6 @@
         tools:context=".LoginFragment">
         
         <androidx.core.widget.NestedScrollView
-            android:layout_above="@+id/bottom_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -22,81 +21,6 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/g_sign_in"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:backgroundTint="@color/colorWhite"
-                    android:clickable="true"
-                    android:elevation="10dp"
-                    android:focusable="true"
-                    app:cardCornerRadius="10dp"
-                    app:contentPadding="10dp"
-                    app:strokeColor="@color/purple"
-                    app:strokeWidth="1dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:src="@drawable/google_icon" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:text="Continue With Google"
-                            android:textColor="@color/purple"
-                            android:textSize="18sp" />
-
-
-                    </LinearLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <View
-                        android:layout_width="150dp"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="2dp"
-                        android:background="#953FFF" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:text="or,"
-                        android:textColor="#474747"
-                        android:textSize="18sp" />
-
-                    <View
-                        android:layout_width="150dp"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="2dp"
-                        android:background="#953FFF" />
-
-                </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/editTextEmailLayout"
@@ -155,9 +79,9 @@
                         android:id="@+id/saveLoginCheckBox"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/purple"
+                        android:buttonTint="@color/orange"
                         android:text="Remember me"
-                        android:textColor="@color/purple"
+                        android:textColor="@color/orange"
                         android:textSize="14sp" />
 
                     <TextView
@@ -167,7 +91,7 @@
                         android:layout_alignBaseline="@id/saveLoginCheckBox"
                         android:layout_alignParentRight="true"
                         android:text="Forget Password ?"
-                        android:textColor="@color/purple"
+                        android:textColor="@color/orange"
                         android:textSize="14sp" />
 
                 </RelativeLayout>
@@ -179,26 +103,16 @@
                     android:layout_height="55dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:backgroundTint="@color/purple"
+                    android:backgroundTint="@color/orange"
                     android:text="Sign in"
                     android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
                     app:cornerRadius="8dp" />
 
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
-
-
-
-        <ImageView
-            android:id="@+id/bottom_image"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_alignParentBottom="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/signin" />
 
     </RelativeLayout>
 </layout>

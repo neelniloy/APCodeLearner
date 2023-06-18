@@ -1,12 +1,11 @@
-package com.braineer.scheduler.models
+package com.projitize.apcodelearner.models
 
 data class Users(
     var userId: String? = null,
     var userName: String? = null,
     var emailAddress: String? = null,
+    var userType: String? = null,
     var userCreationTimeStamp: Long? = null,
-    var routineKey: String? = null,
-    var importKey: String? = null,
-    var importTime: Long? = null,
-    var lastModification: Long? = null
+    var quizScore: Int? = null,
+    var tutorialCount: Int? = 0,
 )

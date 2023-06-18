@@ -2,8 +2,8 @@ package com.braineer.scheduler.repos
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.braineer.scheduler.utils.collectionUser
-import com.braineer.scheduler.models.Users
+import com.projitize.apcodelearner.utils.collectionUser
+import com.projitize.apcodelearner.models.Users
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MoreFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_marginBottom="25dp"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_qa"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/qa"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="Add QnA" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_reference"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/reference"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="Add Reference" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_mini_project"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mini_project"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="Add Project" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_quiz"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/quiz"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="Add Quiz" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+
+</layout>

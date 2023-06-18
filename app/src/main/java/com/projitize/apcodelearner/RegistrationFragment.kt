@@ -12,17 +12,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
-import com.braineer.scheduler.databinding.FragmentRegistrationBinding
-import com.braineer.scheduler.viewmodels.LoginViewModel
+import com.projitize.apcodelearner.viewmodels.LoginViewModel
+import com.projitize.apcodelearner.databinding.FragmentRegistrationBinding
 
 
 class RegistrationFragment : Fragment() {
 
-    private lateinit var binding:FragmentRegistrationBinding
+    private lateinit var binding: FragmentRegistrationBinding
     private val loginViewModel: LoginViewModel by activityViewModels()
     private lateinit var progressDialog: ProgressDialog
 
@@ -39,9 +37,9 @@ class RegistrationFragment : Fragment() {
 
         binding.signup.setOnClickListener {
 
-            val email: String = binding.etEmail.getText().toString()
-            val password: String = binding.etPass.getText().toString()
-            val name: String = binding.etName.getText().toString()
+            val email: String = binding.etEmail.text.toString()
+            val password: String = binding.etPass.text.toString()
+            val name: String = binding.etName.text.toString()
 
             if (email.isEmpty() || password.isEmpty() || name.isEmpty()) {
                 if (name.isEmpty()) {
@@ -76,8 +74,8 @@ class RegistrationFragment : Fragment() {
                 progressDialog.setMessage("Please wait a moment. We are creating your account")
                 progressDialog.show()
 
-                val progressbar = progressDialog!!.findViewById(android.R.id.progress) as ProgressBar
-                progressbar.indeterminateDrawable.setColorFilter(Color.parseColor("#953FFF"), android.graphics.PorterDuff.Mode.SRC_IN)
+                val progressbar = progressDialog.findViewById(android.R.id.progress) as ProgressBar
+                progressbar.indeterminateDrawable.setColorFilter(Color.parseColor("#F75022"), android.graphics.PorterDuff.Mode.SRC_IN)
 
                 loginViewModel.registerUser(email,password,name){
                     if (it=="Success"){

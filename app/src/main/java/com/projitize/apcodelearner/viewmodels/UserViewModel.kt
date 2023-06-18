@@ -1,7 +1,7 @@
-package com.braineer.scheduler.viewmodels
+package com.projitize.apcodelearner.viewmodels
 
 import androidx.lifecycle.ViewModel
-import com.braineer.scheduler.models.Users
+import com.projitize.apcodelearner.models.Users
 import com.braineer.scheduler.repos.UserRepository
 import com.google.firebase.auth.FirebaseAuth
 

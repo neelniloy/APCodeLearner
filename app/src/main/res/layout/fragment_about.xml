@@ -23,7 +23,7 @@
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card_scheduler"
+                android:id="@+id/card_ap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
@@ -51,10 +51,10 @@
 
                         <ImageView
                             android:id="@+id/logo"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/logo_icon" />
+                            android:src="@drawable/logo_square" />
 
                         <LinearLayout
                             android:layout_marginStart="10dp"
@@ -66,114 +66,37 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/acme"
-                                android:text="Scheduler"
+                                android:text="@string/app_name"
                                 android:textColor="?android:textColorPrimary"
-                                android:textSize="32dp"
+                                android:textSize="24dp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="16dp"
+                                android:textSize="14dp"
                                 android:textColor="?android:textColorPrimary"
-                                android:text="1.6.0 (Blueberry)" />
+                                android:text="v 1.0" />
 
                         </LinearLayout>
 
                     </LinearLayout>
 
                     <TextView
+                        android:padding="5dp"
+                        android:justificationMode="inter_word"
                         android:visibility="gone"
+                        tools:visibility="visible"
                         android:id="@+id/tv_about"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="16dp"
                         android:textColor="?android:textColorPrimary"
-                        android:text="The “Scheduler”, is a routine management application for students of any institution. With an in-built sharing option, users can share their routine through the usage of a unique key. Each time the host makes any changes to the routine, a notification will be sent to all the subscribers. Users can customize according to their needs and will without replacing the regular routine. It can be used for daily task reminders and adding future tasks such as quizzes, assignments, and presentation dates. The application will remind you easily through notifications." />
+                        android:text="Experience the power of our user-friendly app as you delve into the world of C programming. Bid farewell to cumbersome books and embrace a sleek and intuitive interface that offers a comprehensive learning experience. From beginners to advanced learners, our app caters to all skill levels, providing interactive lessons, practical examples, and engaging quizzes. Put your knowledge to the test with our thought-provoking quiz system and prepare for oral examinations with the Viva question section. Learn at your own pace, anytime and anywhere, with our flexible and convenient app. Unleash your coding potential and embark on a journey of success with our app. Happy coding! ❤" />
 
                 </LinearLayout>
 
 
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="6dp"
-                app:contentPadding="4dp"
-                android:clickable="false"
-                android:focusable="true"
-                app:cardElevation="6dp"
-                app:cardCornerRadius="10dp"
-                app:cardBackgroundColor="?attr/colorSurface"
-                android:foreground="?selectableItemBackground">
-
-                <LinearLayout
-                    android:padding="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="left"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        android:textColor="?attr/colorPrimary"
-                        android:text="Supervisor" />
-
-                    <LinearLayout
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/teacher" />
-
-                        <LinearLayout
-                            android:layout_marginStart="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="18dp"
-                                android:textColor="?android:textColorPrimary"
-                                android:text="Mr. Saiful Islam" />
-
-                            <TextView
-                                android:layout_marginTop="2dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="14dp"
-                                android:textColor="?android:textColorPrimary"
-                                android:text="Sr. Lecturer" />
-
-                            <TextView
-                                android:layout_marginTop="2dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="12dp"
-                                android:textColor="?android:textColorPrimary"
-                                android:text="Daffodil International University" />
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -228,7 +151,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="18dp"
                                 android:textColor="?android:textColorPrimary"
-                                android:text="Niloy Kumar Sarker" />
+                                android:text="Akil Aktab Prattasha" />
 
                             <TextView
                                 android:layout_marginTop="2dp"
@@ -236,7 +159,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="14dp"
                                 android:textColor="?android:textColorPrimary"
-                                android:text="Full Stack Developer" />
+                                android:text="Mobile Application Developer" />
 
                         </LinearLayout>
 
@@ -249,6 +172,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_feedback"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
@@ -261,65 +185,32 @@
                 android:foreground="?selectableItemBackground">
 
                 <LinearLayout
-                    android:padding="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="left"
-                    android:orientation="vertical">
+                    android:layout_margin="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/feedback" />
 
                     <TextView
+                        android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        android:textColor="?attr/colorPrimary"
-                        android:text="Maintainer" />
-
-                    <LinearLayout
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/me" />
-
-                        <LinearLayout
-                            android:layout_marginStart="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="18dp"
-                                android:textColor="?android:textColorPrimary"
-                                android:text="Mine Uddin Utsha" />
-
-                            <TextView
-                                android:layout_marginTop="2dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="14dp"
-                                android:textColor="?android:textColorPrimary"
-                                android:text="Programmer" />
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
+                        android:textSize="18sp"
+                        android:textColor="?android:textColorPrimary"
+                        android:text="Feedback" />
 
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
@@ -332,59 +223,25 @@
                 android:foreground="?selectableItemBackground">
 
                 <LinearLayout
-                    android:padding="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="left"
-                    android:orientation="vertical">
+                    android:layout_margin="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logout" />
 
                     <TextView
+                        android:layout_marginStart="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        android:textColor="?attr/colorPrimary"
-                        android:text="Maintainer" />
-
-                    <LinearLayout
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/me_female" />
-
-                        <LinearLayout
-                            android:layout_marginStart="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="18dp"
-                                android:textColor="?android:textColorPrimary"
-                                android:text="Suraiya Tanzeen" />
-
-                            <TextView
-                                android:layout_marginTop="2dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="14dp"
-                                android:textColor="?android:textColorPrimary"
-                                android:text="Programmer" />
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
+                        android:textSize="18sp"
+                        android:textColor="?android:textColorPrimary"
+                        android:text="Logout" />
 
                 </LinearLayout>
 

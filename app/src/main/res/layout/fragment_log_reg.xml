@@ -11,88 +11,77 @@
         android:layout_height="match_parent"
         tools:context=".LogRegFragment">
 
-
-        <LinearLayout
-            android:visibility="gone"
-            android:layout_marginEnd="20dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="35dp"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/log_reg_back"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-250dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/log_reg_back" />
 
-            <ImageView
-                android:id="@+id/scan_routine"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/scan_icon"/>
-
-            <TextView
-                android:id="@+id/import_routine"
-                android:layout_marginStart="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/purple"
-                android:text="Import Routine"
-                android:textSize="18sp" />
-
-
-        </LinearLayout>
-
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/log_reg_user"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-50dp"
+            android:src="@drawable/log_reg_user" />
 
         <LinearLayout
-            android:layout_marginTop="35dp"
             android:id="@+id/intro_layout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/log_reg_back"
+            android:layout_marginTop="0dp"
             android:orientation="vertical">
 
 
             <TextView
-                android:layout_marginStart="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:text="Welcome to"
+                android:textColor="#555"
                 android:textSize="28sp"
-                android:textStyle="bold"
-                android:textColor="#555" />
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_marginStart="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Scheduler!"
+                android:layout_marginStart="25dp"
+                android:text="@string/app_name"
+                android:textColor="@color/orange"
                 android:textSize="30sp"
-                android:textStyle="bold"
-                android:textColor="@color/purple" />
+                android:textStyle="bold" />
 
 
             <LinearLayout
-                android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/sing_in"
-                    android:layout_marginStart="25dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:text="Sign in"
+                    android:textColor="#474747"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#474747" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/sign_up"
-                    android:layout_marginStart="35dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
                     android:text="Sign up"
+                    android:textColor="#474747"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#474747" />
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -101,11 +90,11 @@
 
 
         <androidx.viewpager2.widget.ViewPager2
-            android:layout_below="@+id/intro_layout"
-            android:layout_marginTop="15dp"
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_below="@+id/intro_layout"
+            android:layout_marginTop="15dp"
             android:nestedScrollingEnabled="true" />
 
     </RelativeLayout>

@@ -13,6 +13,426 @@
         tools:context=".DashboardFragment">
 
 
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="-20dp"
+            android:id="@+id/card_profile"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:cardElevation="12dp"
+            android:focusable="true"
+            app:cardCornerRadius="18dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/profile_back">
+
+
+                <ImageView
+                    android:id="@+id/profile_icon"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/profile_icon" />
+
+                <LinearLayout
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/profile_icon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Name"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:text="Email"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/donut_layout"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <app.futured.donut.DonutProgressView
+                            android:id="@+id/donut_view"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:donut_bgLineColor="@color/white"
+                            app:donut_gapAngle="270"
+                            app:donut_gapWidth="0"
+                            app:donut_strokeCap="round"
+                            app:donut_strokeWidth="8dp" />
+
+                        <TextView
+                            android:id="@+id/tv_progress_percentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="47%"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="26sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginTop="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/tv_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/donut_layout"
+                        android:text="Tutorial Progress"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_below="@id/card_profile"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_tutorial"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tutorial"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="Tutorials" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_quiz"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/quiz"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="Quiz" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_mini_project"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mini_project"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="Mini Project" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_qa"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/qa"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="Important QnA" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_about"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/about"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="About" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_reference"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/reference"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="Reference" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_admin_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    app:contentPadding="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    android:foreground="?selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/me"/>
+                        <TextView
+                            android:layout_marginStart="17dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:textStyle="normal"
+                            android:textAlignment="center"
+                            android:textColor = "?android:textColorPrimary"
+                            android:text="Admin Panel" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
 
     </RelativeLayout>

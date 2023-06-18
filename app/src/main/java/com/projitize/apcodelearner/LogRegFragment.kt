@@ -1,18 +1,11 @@
 package com.braineer.scheduler
 
-import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.os.Handler
-import android.text.InputType
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -21,20 +14,14 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.braineer.scheduler.databinding.FragmentLogRegBinding
-import com.braineer.scheduler.viewmodels.LoginViewModel
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
-import com.thecode.aestheticdialogs.AestheticDialog
-import com.thecode.aestheticdialogs.DialogAnimation
-import com.thecode.aestheticdialogs.DialogStyle
-import com.thecode.aestheticdialogs.DialogType
+import com.projitize.apcodelearner.viewmodels.LoginViewModel
+import com.projitize.apcodelearner.R
+import com.projitize.apcodelearner.databinding.FragmentLogRegBinding
 
 
 class LogRegFragment : Fragment() {
 
-    private lateinit var binding:FragmentLogRegBinding
+    private lateinit var binding: FragmentLogRegBinding
     private val NUM_PAGES = 2
     private lateinit var progressDialog: ProgressDialog
     private val loginViewModel: LoginViewModel by activityViewModels()
@@ -76,13 +63,13 @@ class LogRegFragment : Fragment() {
             override fun onPageSelected(position: Int) {
                 if (position == 0) {
                     binding.viewpager.currentItem = 0
-                    binding.singIn.setTextColor(Color.parseColor("#953FFF"))
+                    binding.singIn.setTextColor(Color.parseColor("#F75022"))
                     binding.signUp.setTextColor(Color.parseColor("#474747"))
                 }
                 else if (position == 1) {
                     binding.viewpager.currentItem = 1
                     binding.singIn.setTextColor(Color.parseColor("#474747"))
-                    binding.signUp.setTextColor(Color.parseColor("#953FFF"))
+                    binding.signUp.setTextColor(Color.parseColor("#F75022"))
                 }
                 super.onPageSelected(position)
             }
