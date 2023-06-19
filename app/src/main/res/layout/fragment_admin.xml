@@ -30,6 +30,93 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_tutorial"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/tutorial"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="Add Tutorial" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_feedback"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_margin="8dp"
+                        app:contentPadding="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="15dp"
+                        app:cardBackgroundColor="?attr/colorSurface"
+                        android:foreground="?selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/feedback"/>
+                            <TextView
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:textStyle="normal"
+                                android:textAlignment="center"
+                                android:textColor = "?android:textColorPrimary"
+                                android:text="View Feedback" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card_qa"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"

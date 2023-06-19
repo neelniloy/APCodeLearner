@@ -4,14 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.FirebaseFirestore
-import com.projitize.apcodelearner.models.MiniProjectModel
-import com.projitize.apcodelearner.models.QaModel
-import com.projitize.apcodelearner.models.QuizModel
-import com.projitize.apcodelearner.models.ReferenceModel
-import com.projitize.apcodelearner.utils.collectionMiniProject
-import com.projitize.apcodelearner.utils.collectionQA
-import com.projitize.apcodelearner.utils.collectionQuiz
-import com.projitize.apcodelearner.utils.collectionReference
+import com.projitize.apcodelearner.models.*
+import com.projitize.apcodelearner.utils.*
 
 class AdminViewModel:ViewModel() {
 
@@ -127,6 +121,23 @@ class AdminViewModel:ViewModel() {
                     doc.toObject(QuizModel::class.java)?.let { tempList.add(it) }
                 }
                 modelLD.value = tempList.shuffled()
+            }
+        return modelLD
+    }
+
+    fun getFeedbackList() : LiveData<List<FeedbackModel>> {
+        val modelLD = MutableLiveData<List<FeedbackModel>>()
+        db.collection(collectionFeedback)
+            .orderBy("time")
+            .addSnapshotListener { value, error ->
+                if (error != null) {
+                    return@addSnapshotListener
+                }
+                val tempList = mutableListOf<FeedbackModel>()
+                for (doc in value!!.documents) {
+                    doc.toObject(FeedbackModel::class.java)?.let { tempList.add(it) }
+                }
+                modelLD.value = tempList.reversed()
             }
         return modelLD
     }

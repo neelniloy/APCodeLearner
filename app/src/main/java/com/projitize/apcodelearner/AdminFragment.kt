@@ -13,6 +13,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.projitize.apcodelearner.databinding.AddMiniProjectDialogBinding
 import com.projitize.apcodelearner.databinding.AddQaDialogBinding
 import com.projitize.apcodelearner.databinding.AddQuizItemDialogBinding
@@ -348,6 +349,18 @@ class AdminFragment : Fragment() {
 
         }
 
+
+        binding.cardFeedback.setOnClickListener {
+
+            findNavController().navigate(R.id.action_adminFragment_to_feedbackFragment)
+
+        }
+
+        binding.cardTutorial.setOnClickListener {
+
+            Toast.makeText(requireActivity(), "Coming soon", Toast.LENGTH_SHORT).show()
+
+        }
 
 
         return binding.root

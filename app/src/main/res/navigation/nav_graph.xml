@@ -108,5 +108,9 @@
         android:id="@+id/adminFragment"
         android:name="com.projitize.apcodelearner.AdminFragment"
         android:label="Admin Dashboard"
-        tools:layout="@layout/fragment_admin" />
+        tools:layout="@layout/fragment_admin" >
+        <action
+            android:id="@+id/action_adminFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+    </fragment>
 </navigation>

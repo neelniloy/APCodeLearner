@@ -6,6 +6,10 @@ import com.projitize.apcodelearner.utils.collectionUser
 import com.projitize.apcodelearner.models.Users
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.projitize.apcodelearner.models.FeedbackModel
+import com.projitize.apcodelearner.models.QaModel
+import com.projitize.apcodelearner.utils.collectionFeedback
+import com.projitize.apcodelearner.utils.collectionQA
 
 class UserRepository {
     val firebaseAuth = FirebaseAuth.getInstance()
@@ -60,5 +64,17 @@ class UserRepository {
             }
         return userExits
     }
+
+    fun addFeedback(model: FeedbackModel, callback: (String) -> Unit) {
+        val modelDoc = db.collection(collectionFeedback).document()
+
+        modelDoc.set(model)
+            .addOnSuccessListener {
+                callback("Success")
+            }.addOnFailureListener {
+                callback("Failed")
+            }
+    }
+
 
 }

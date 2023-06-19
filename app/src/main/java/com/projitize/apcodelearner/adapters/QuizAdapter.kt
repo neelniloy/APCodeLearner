@@ -1,7 +1,9 @@
 package com.projitize.apcodelearner.adapters
 
+import android.util.SparseArray
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.RadioButton
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +13,8 @@ import com.projitize.apcodelearner.databinding.ReferenceItemBinding
 import com.projitize.apcodelearner.models.QaModel
 import com.projitize.apcodelearner.models.QuizModel
 import com.projitize.apcodelearner.models.ReferenceModel
+
+private val selectedIndices = SparseArray<Int>()
 
 class QuizAdapter(val callback: (Int, QuizItemBinding, QuizModel)->Unit) : ListAdapter<QuizModel, QuizAdapter.ViewHolder>(
     TaskDiffUtil()
@@ -48,6 +52,23 @@ class QuizAdapter(val callback: (Int, QuizItemBinding, QuizModel)->Unit) : ListA
 
         holder.binding.refCount.text = "Q${position+1}. "
 
+        // Set the selected index for this item
+        val selectedIndex = selectedIndices.get(position, -1)
+        if (selectedIndex != -1) {
+            holder.binding.radioGroup.check(holder.binding.radioGroup.getChildAt(selectedIndex).id)
+        } else {
+            holder.binding.radioGroup.clearCheck()
+        }
 
+        // Set the listener for radio button selection
+        holder.binding.radioGroup.setOnCheckedChangeListener { group, checkedId ->
+            val selectedRadioButton = group.findViewById<RadioButton>(checkedId)
+            val selectedIndex = group.indexOfChild(selectedRadioButton)
+
+            // Update the selected index for this item
+            selectedIndices.put(position, selectedIndex)
+            notifyItemChanged(position)
+
+        }
     }
 }
