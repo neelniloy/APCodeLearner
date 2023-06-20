@@ -14,7 +14,7 @@
 
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_marginTop="-20dp"
+            android:layout_marginTop="-15dp"
             android:id="@+id/card_profile"
             android:layout_alignParentTop="true"
             android:layout_width="match_parent"
@@ -22,12 +22,12 @@
             android:clickable="false"
             app:cardElevation="12dp"
             android:focusable="true"
-            app:cardCornerRadius="18dp"
+            app:cardCornerRadius="15dp"
             >
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="150dp"
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:background="@drawable/profile_back">
@@ -68,54 +68,11 @@
 
                 </LinearLayout>
 
-                <RelativeLayout
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="25dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <RelativeLayout
-                        android:id="@+id/donut_layout"
-                        android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <app.futured.donut.DonutProgressView
-                            android:id="@+id/donut_view"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            app:donut_bgLineColor="@color/white"
-                            app:donut_gapAngle="270"
-                            app:donut_gapWidth="0"
-                            app:donut_strokeCap="round"
-                            app:donut_strokeWidth="8dp" />
-
-                        <TextView
-                            android:id="@+id/tv_progress_percentage"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="47%"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textSize="26sp"
-                            android:textStyle="bold" />
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_marginTop="25dp"
-                        android:layout_centerHorizontal="true"
-                        android:id="@+id/tv_progress"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/donut_layout"
-                        android:text="Tutorial Progress"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="12sp" />
-
-                </RelativeLayout>
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/logo_round"/>
 
 
             </LinearLayout>

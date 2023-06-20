@@ -18,11 +18,9 @@ import com.projitize.apcodelearner.databinding.AddMiniProjectDialogBinding
 import com.projitize.apcodelearner.databinding.AddQaDialogBinding
 import com.projitize.apcodelearner.databinding.AddQuizItemDialogBinding
 import com.projitize.apcodelearner.databinding.AddReferenceDialogBinding
+import com.projitize.apcodelearner.databinding.AddTutorialDialogBinding
 import com.projitize.apcodelearner.databinding.FragmentAdminBinding
-import com.projitize.apcodelearner.models.MiniProjectModel
-import com.projitize.apcodelearner.models.QaModel
-import com.projitize.apcodelearner.models.QuizModel
-import com.projitize.apcodelearner.models.ReferenceModel
+import com.projitize.apcodelearner.models.*
 import com.projitize.apcodelearner.viewmodels.AdminViewModel
 
 
@@ -358,7 +356,73 @@ class AdminFragment : Fragment() {
 
         binding.cardTutorial.setOnClickListener {
 
-            Toast.makeText(requireActivity(), "Coming soon", Toast.LENGTH_SHORT).show()
+            val dialogBuilder = AlertDialog.Builder(activity)
+
+            val binding = AddTutorialDialogBinding.inflate(LayoutInflater.from(requireActivity()))
+            dialogBuilder.setView(binding.root)
+
+
+            val alertDialog = dialogBuilder.create()
+            alertDialog.setCanceledOnTouchOutside(false)
+            alertDialog.show()
+            alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+
+            binding.btnOk.setOnClickListener {
+                val title = binding.etTitle.text.toString().trim()
+                val code = binding.etCode.text.toString().trim()
+                val details = binding.etDetails.text.toString().trim()
+
+
+                if (title.isEmpty() || details.isEmpty()) {
+
+                    Toast.makeText(
+                        requireActivity(),
+                        "Field can not be empty",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                } else {
+                    val progressDialog = ProgressDialog(requireActivity())
+                    progressDialog.setMessage("Please wait...")
+                    progressDialog.setCanceledOnTouchOutside(false)
+                    progressDialog.show()
+
+                    val progressbar =
+                        progressDialog!!.findViewById(android.R.id.progress) as ProgressBar
+                    progressbar.indeterminateDrawable.setColorFilter(
+                        Color.parseColor("#F75022"),
+                        android.graphics.PorterDuff.Mode.SRC_IN
+                    )
+
+                    val model = TutorialModel(
+                        title = title,
+                        code = code.ifEmpty { "" },
+                        details = details,
+                        time = System.currentTimeMillis()
+                    )
+
+                    adminViewModel.addTutorial(model) {
+                        if (it == "Success") {
+                            progressDialog.dismiss()
+                            alertDialog.dismiss()
+
+                            Toast.makeText(
+                                requireActivity(),
+                                "Tutorial added successfully",
+                                Toast.LENGTH_SHORT
+                            ).show()
+
+                        } else {
+                            progressDialog.dismiss()
+                            Toast.makeText(requireActivity(), "Something went wrong, Please try again", Toast.LENGTH_SHORT).show()
+                        }
+
+                    }
+                }
+            }
+
+            binding.btnCancel.setOnClickListener { alertDialog.dismiss() }
 
         }
 

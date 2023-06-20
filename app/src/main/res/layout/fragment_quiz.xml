@@ -35,6 +35,8 @@
             android:id="@+id/empty"/>
 
         <com.google.android.material.button.MaterialButton
+            android:visibility="gone"
+            tools:visibility="gone"
             android:layout_margin="20dp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"

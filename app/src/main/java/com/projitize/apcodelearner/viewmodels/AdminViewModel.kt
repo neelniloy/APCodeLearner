@@ -56,6 +56,17 @@ class AdminViewModel:ViewModel() {
             }
     }
 
+    fun addTutorial(model: TutorialModel, callback: (String) -> Unit) {
+        val modelDoc = db.collection(collectionTutorial).document()
+
+        modelDoc.set(model)
+            .addOnSuccessListener {
+                callback("Success")
+            }.addOnFailureListener {
+                callback("Failed")
+            }
+    }
+
     fun getQaList() : LiveData<List<QaModel>> {
         val modelLD = MutableLiveData<List<QaModel>>()
         db.collection(collectionQA)
@@ -138,6 +149,23 @@ class AdminViewModel:ViewModel() {
                     doc.toObject(FeedbackModel::class.java)?.let { tempList.add(it) }
                 }
                 modelLD.value = tempList.reversed()
+            }
+        return modelLD
+    }
+
+    fun getTutorialList() : LiveData<List<TutorialModel>> {
+        val modelLD = MutableLiveData<List<TutorialModel>>()
+        db.collection(collectionTutorial)
+            .orderBy("time")
+            .addSnapshotListener { value, error ->
+                if (error != null) {
+                    return@addSnapshotListener
+                }
+                val tempList = mutableListOf<TutorialModel>()
+                for (doc in value!!.documents) {
+                    doc.toObject(TutorialModel::class.java)?.let { tempList.add(it) }
+                }
+                modelLD.value = tempList
             }
         return modelLD
     }

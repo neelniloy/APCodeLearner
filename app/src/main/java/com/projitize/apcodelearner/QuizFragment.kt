@@ -33,7 +33,7 @@ class QuizFragment : Fragment() {
     private val adminViewModel: AdminViewModel by activityViewModels()
     private val userViewModel: UserViewModel by activityViewModels()
     private lateinit var adapter: QuizAdapter
-    private var answerList = mutableListOf<String>()
+    private var answerList = mutableListOf<Int>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,12 +50,12 @@ class QuizFragment : Fragment() {
                 val selectedIndex = binding.radioGroup.indexOfChild(binding.root.findViewById<RadioButton>(checkedId))
 
                 if (selectedIndex >= 0 && model.answer?.toInt() == selectedIndex + 1) {
-                    if (!answerList.contains(model.answer)){
-                        answerList.add(model.answer!!)
+                    if (!answerList.contains(position)){
+                        answerList.add(position)
                     }
                 }else{
-                    if (answerList.contains(model.answer)){
-                        answerList.remove(model.answer)
+                    if (answerList.contains(position)){
+                        answerList.remove(position)
                     }
                 }
             }
@@ -101,9 +101,11 @@ class QuizFragment : Fragment() {
                 if (list.isEmpty()) {
                     binding.mProgressBar.visibility = View.GONE
                     binding.empty.visibility = View.VISIBLE
+                    binding.btnFinish.visibility = View.GONE
                 } else {
                     binding.mProgressBar.visibility = View.GONE
                     binding.empty.visibility = View.GONE
+                    binding.btnFinish.visibility = View.VISIBLE
                 }
                 adapter.submitList(list)
             }
