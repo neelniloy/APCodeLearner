@@ -5,4 +5,5 @@ data class TutorialModel(
     var code: String? = null,
     var details: String? = null,
     var time: Long? = null,
+    var count: Int? = null,
 )

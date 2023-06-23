@@ -10,7 +10,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <RelativeLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            >
+
+            <com.projitize.apcodelearner.utils.ClearFocusEditText
+                android:layout_centerHorizontal="true"
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/back_search"
+                android:drawableEnd="@drawable/search"
+                android:hint="Search Tutorial"
+                android:textSize="16sp"
+                android:iconifiedByDefault="false"
+                android:paddingStart="20dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="2dp"
+                android:inputType=""
+                android:singleLine="true" />
+
+        </RelativeLayout>
+
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/search_layout"
             android:id="@+id/tutorial_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

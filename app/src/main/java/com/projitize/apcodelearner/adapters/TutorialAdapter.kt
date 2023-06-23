@@ -5,13 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.projitize.apcodelearner.databinding.MiniProjectItemBinding
-import com.projitize.apcodelearner.databinding.QaItemBinding
-import com.projitize.apcodelearner.databinding.ReferenceItemBinding
 import com.projitize.apcodelearner.databinding.TutorialItemBinding
-import com.projitize.apcodelearner.models.MiniProjectModel
-import com.projitize.apcodelearner.models.QaModel
-import com.projitize.apcodelearner.models.ReferenceModel
 import com.projitize.apcodelearner.models.TutorialModel
 
 class TutorialAdapter(val callback: (Int, TutorialItemBinding, TutorialModel)->Unit) : ListAdapter<TutorialModel, TutorialAdapter.ViewHolder>(
@@ -47,9 +41,6 @@ class TutorialAdapter(val callback: (Int, TutorialItemBinding, TutorialModel)->U
         callback(position,holder.binding,user)
 
         holder.bind(user)
-
-        holder.binding.count.text = "${position+1}."
-
 
     }
 }
